@@ -1,13 +1,17 @@
 {
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build"
-    },
-    "devDependencies": {
-        "axios": "^1.7.4",
-        "laravel-vite-plugin": "^1.0",
-        "vite": "^5.0"
-    }
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zarpach/Laravel-todo.git"
+  },
+  "private": true,
+  "dependencies": {
+    "vite": "^5.4.5"
+  }
 }

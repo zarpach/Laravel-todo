@@ -1,6 +1,6 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
 
-import HomeView from './components/HelloWorld.vue'
+import HomeView from './App.vue'
 
 const routes = [
     { path: '/tasks', component: HomeView },

@@ -11,7 +11,12 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->statefulApi();
+        $middleware->validateCsrfTokens(except: [
+            '/tasks',
+            '/tasks/*/delete',
+            '/tasks/*/update',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

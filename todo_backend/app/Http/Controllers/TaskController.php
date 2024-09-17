@@ -13,15 +13,8 @@ class TaskController extends Controller {
     }
 
     public function store(Request $request) {
-        $task = new Task();
-        $task->name = $request->name;
-        $task->status = $request->status;
-        $task->description = $request->description;
-        $task->save();
-
-        return response()->json([
-            'message' => 'Task created!'
-        ], 201);
+        $task = Task::create($request->all());
+        return response()->json($task, 201);
     }
 
     public function show($id) {
@@ -39,14 +32,13 @@ class TaskController extends Controller {
     public function update(Request $request, $id) {
         $task = Task::find($id);
         if (!empty($task)) {
-            $task->name = is_null($request->name) ? $task->name : $request->name;
-            $task->status = is_null($request->status) ? $task->status : $request->status;
-            $task->description = is_null($request->description) ? $task->description : $request->description;
+            $task->name = $request->name;
+            $task->description = $request->description;
+            $task->status = $request->status;
+
             $task->save();
 
-            return response()->json([
-                'message' => 'Task updated!'
-            ]);
+            return response()->json($task);
         }
 
         return response()->json([

@@ -45,7 +45,7 @@ php artisan key:generate
 
 ### 5. Сид для базы данных
 ```
-php artisan make:seeder --class=DatabaseSeeder
+php artisan db:seed --class=DatabaseSeeder 
 ```
 
 ### 6. Запускаем сервер

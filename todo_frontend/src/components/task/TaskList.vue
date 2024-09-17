@@ -1,6 +1,6 @@
 <template>
-  <div class="task-list">
-    <ul role="list" class="divide-y divide-gray-600">
+  <div class="mt-6 w-2/3 task-list">
+    <ul role="list" class="divide-y divide-gray-300">
       <TaskItem
           v-for="task in tasks"
           :key="task.id"

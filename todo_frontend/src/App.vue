@@ -1,8 +1,8 @@
 <template>
-  <div class="mx-auto p-6 bg-gray-900 text-gray-100 min-h-screen">
-    <h1 class="text-2xl font-bold mb-6 text-center text-white">Task Manager</h1>
+  <div class="lg:container p-6 text-gray-100 mt-6">
+    <h1 class="font-bold">Task Manager</h1>
 
-    <div class="flex grid-cols-2 gap-6">
+    <div class="flex gap-x-6">
       <TaskList :tasks="tasks" @update="updateTask" @delete="deleteTask" />
       <TaskForm @create="addNewTask" />
     </div>

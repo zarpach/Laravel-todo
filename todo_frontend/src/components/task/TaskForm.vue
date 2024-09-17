@@ -1,6 +1,6 @@
 <template>
-  <div class="task-form bg-gray-800 shadow-md rounded-lg overflow-hidden p-4">
-    <h2 class="text-lg font-semibold mb-4">Create Task</h2>
+  <div class="w-1/3 task-form mt-6 bg-gray-800 shadow-md rounded-lg overflow-hidden p-4">
+    <h2 class="text-lg font-semibold mb-4 text-white">Create Task</h2>
 
     <form @submit.prevent="submitForm">
       <div class="mb-4">
@@ -23,7 +23,7 @@
       </div>
 
       <div class="flex justify-end">
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Create Task</button>
+        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Create Task</button>
       </div>
     </form>
   </div>
